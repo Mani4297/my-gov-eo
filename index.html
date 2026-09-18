@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Government Exam Journey — Personal Study Coach for Manikanta</title>
+  <meta name="description" content="A calm, no-pressure, beginner-friendly personal study coach for Manikanta">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js"></script>
+</head>
+<body>
+
+  <!-- Top Application Header -->
+  <header class="app-header">
+    <div class="header-top">
+      <div class="brand-wrapper">
+        <div class="brand-icon">🌱</div>
+        <div>
+          <h1 class="brand-title">My Government Exam Journey</h1>
+          <p class="brand-tagline">Personal Study Coach for Manikanta</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-what-now" onclick="openFocusModal()">
+          <span>❓</span> WHAT SHOULD I DO NOW?
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar (7 Exact Tabs) -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <button class="nav-btn active" data-tab="today" onclick="switchTab('today')">
+          <span>🏠</span> Today
+        </button>
+        <button class="nav-btn" data-tab="subjects" onclick="switchTab('subjects')">
+          <span>📚</span> Subjects
+        </button>
+        <button class="nav-btn" data-tab="practice" onclick="switchTab('practice')">
+          <span>📝</span> Practice
+        </button>
+        <button class="nav-btn" data-tab="revision" onclick="switchTab('revision')">
+          <span>🔁</span> Revision
+        </button>
+        <button class="nav-btn" data-tab="mistakes" onclick="switchTab('mistakes')">
+          <span>❌</span> Mistake Book
+        </button>
+        <button class="nav-btn" data-tab="progress" onclick="switchTab('progress')">
+          <span>📊</span> Progress
+        </button>
+        <button class="nav-btn" data-tab="settings" onclick="switchTab('settings')">
+          <span>⚙️</span> Settings
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main View Area -->
+  <main class="app-main">
+    <section id="view-today"></section>
+    <section id="view-subjects" style="display:none;"></section>
+    <section id="view-practice" style="display:none;"></section>
+    <section id="view-revision" style="display:none;"></section>
+    <section id="view-mistakes" style="display:none;"></section>
+    <section id="view-progress" style="display:none;"></section>
+    <section id="view-settings" style="display:none;"></section>
+  </main>
+
+  <!-- WHAT SHOULD I DO NOW Focus Overlay -->
+  <div id="focus-overlay" class="focus-overlay">
+    <div class="focus-container">
+      <div class="focus-header-bar">
+        <span id="focus-subject-badge" class="focus-badge">🧠 Reasoning</span>
+        <button class="btn-secondary" onclick="closeFocusModal()" style="font-size:0.9rem;">Close Focus View</button>
+      </div>
+
+      <div class="card" style="border:2px solid var(--accent-primary-border);">
+        <div style="font-size:0.85rem; color:var(--accent-primary); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">
+          Right Now Focus
+        </div>
+        <h2 id="focus-topic-title" style="font-size:1.8rem; font-weight:800; margin-bottom:12px; color:var(--text-main);">Directions</h2>
+
+        <!-- Calm Timer Widget -->
+        <div class="timer-widget">
+          <div>
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">Calm Session Timer</div>
+            <div id="timer-digits" class="timer-digits">45:00</div>
+          </div>
+          <div class="timer-controls">
+            <button id="timer-toggle-btn" class="btn-start-task" style="padding:10px 20px; font-size:0.95rem;" onclick="toggleTimer()">
+              ▶ Start Timer
+            </button>
+            <button class="btn-secondary" style="padding:10px 16px; font-size:0.95rem;" onclick="resetTimer(45)">
+              🔄 Reset
+            </button>
+          </div>
+        </div>
+
+        <div id="focus-checklist-container"></div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; flex-wrap:wrap; gap:12px;">
+          <button class="btn-confusion" onclick="openConfusionModal('Focus Task')">
+            😕 I Don't Understand
+          </button>
+          <button class="btn-start-task" style="background-color:var(--accent-primary);" onclick="markCurrentTopicComplete(); closeFocusModal();">
+            ✅ Mark Complete & Next Topic
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- I Don't Understand Confusion Resolver Modal -->
+  <div id="confusion-modal" class="modal-backdrop">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeConfusionModal()">&times;</button>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+        <span style="font-size:1.6rem;">🌱</span>
+        <h3 style="font-size:1.3rem; font-weight:800; color:var(--text-main);">I Don't Understand</h3>
+      </div>
+      <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">
+        Topic: <strong id="confusion-topic-name" style="color:var(--text-main);">Current Topic</strong>. What part is giving you trouble?
+      </p>
+
+      <div class="confusion-options">
+        <button class="confusion-opt-btn" onclick="selectConfusionOption('qConfusion')">
+          1. ❓ <strong>I don't understand what the question is asking</strong>
+        </button>
+        <button class="confusion-opt-btn" onclick="selectConfusionOption('conceptConfusion')">
+          2. 💡 <strong>I don't understand the core concept</strong>
+        </button>
+        <button class="confusion-opt-btn" onclick="selectConfusionOption('formulaConfusion')">
+          3. 📐 <strong>I don't understand why this formula is used</strong>
+        </button>
+        <button class="confusion-opt-btn" onclick="selectConfusionOption('solutionConfusion')">
+          4. 🪜 <strong>I don't understand the step-by-step solution</strong>
+        </button>
+        <button class="confusion-opt-btn" onclick="selectConfusionOption('forgotTopic')">
+          5. 🔁 <strong>I forgot the previous foundational topic</strong>
+        </button>
+      </div>
+
+      <div id="confusion-solution-box" class="confusion-solution-box" style="display:none;"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
