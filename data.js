@@ -2183,50 +2183,144 @@ window.PANCHAYAT_SECRETARY_SYLLABUS = [
 ];
 
 window.APPSC_ENDOWMENT_SYLLABUS = {
+  "writtenExam": {
+    "paperCount": 2,
+    "questionsPerPaper": 150,
+    "minutesPerPaper": 150,
+    "marksPerPaper": 150,
+    "totalMarks": 300,
+    "negativeMarking": "One-third of the marks prescribed for the question for each wrong answer."
+  },
   "paper1": [
     {
-      "title": "General Studies",
-      "desc": "Polity, History, AP Geography, Economy, Science, Environment, Current Affairs."
+      "title": "01. Current Events",
+      "desc": "Major current events and issues relating to international, national and State of Andhra Pradesh affairs."
     },
     {
-      "title": "Mental Ability & Reasoning",
-      "desc": "Directions, Series, Coding, Blood Relations, Venn diagrams, Seating arrangement."
+      "title": "02. General Science & Technology",
+      "desc": "General science and its applications to day-to-day life, including contemporary developments in science, technology and information technology."
     },
     {
-      "title": "Basic Data Interpretation",
-      "desc": "Tabular data, bar charts, line graphs, pie charts, percentage calculations."
+      "title": "03. History of India",
+      "desc": "Broad general understanding of Indian history, with emphasis on its social, economic and cultural aspects, the Andhra Pradesh focus and the Indian National Movement."
+    },
+    {
+      "title": "04. Geography of India",
+      "desc": "Indian geography with special focus on Andhra Pradesh."
+    },
+    {
+      "title": "05. Indian Polity & Governance",
+      "desc": "Constitutional issues, public policy, reforms and e-Governance initiatives."
+    },
+    {
+      "title": "06. Indian Economy & Planning",
+      "desc": "Basic concepts of the Indian economy, economic planning and development."
+    },
+    {
+      "title": "07. Sustainable Development & Environmental Protection",
+      "desc": "Sustainable development, environmental protection and related challenges."
+    },
+    {
+      "title": "08. Disaster Management",
+      "desc": "Vulnerability profile, prevention and mitigation strategies, application of remote sensing and GIS in disaster assessment."
+    },
+    {
+      "title": "09. Logical Reasoning & Analytical Ability",
+      "desc": "Logical reasoning, analytical ability and logical interpretation."
+    },
+    {
+      "title": "10. Data Analysis",
+      "desc": "Tabulation and visual representation of data, basic data analysis, summary statistics such as mean, median and mode, variance, and interpretation."
     }
   ],
   "paper2": [
     {
-      "title": "1. Hindu Philosophy",
-      "desc": "Vedas, Upanishads, Bhagavad Gita, Advaita/Dvaita/Vishishtadvaita schools."
+      "title": "1. Ramayanam",
+      "desc": "Basic knowledge of characters, various parts (Kandaas), dynasties and places mentioned in the Ramayanam."
     },
     {
-      "title": "2. Hindu Religion Basics",
-      "desc": "Major festivals, Puranas, Epics (Ramayana, Mahabharata), Avatars of Vishnu."
+      "title": "2. Mahabharatham",
+      "desc": "Basic knowledge of characters, various parts (Parvaas), dynasties and places mentioned in the Mahabharatham."
     },
     {
-      "title": "3. Temple System & Architecture",
-      "desc": "Dravidian temple architecture, Gopurams, Vimanas, Garbhagriha, Agama Shastras."
+      "title": "3. Bhagavatham",
+      "desc": "Basic knowledge of characters, various parts (Skandams) and places mentioned in Bhagavatham."
     },
     {
-      "title": "4. Famous Hindu Temples in AP",
-      "desc": "Tirumala Tirupati, Srisailam, Simhachalam, Kanaka Durga (Vijayawada), Srikalahasti, Ahobilam, Annavaram."
+      "title": "4. Hindu Puranas",
+      "desc": "Basic knowledge of the various Hindu Puranas and the places mentioned in them."
     },
     {
-      "title": "5. Temple Administration",
-      "desc": "Executive Officer (EO) duties, Trust Boards, Sevas, Arjitha Seva booking, Temple jewels/treasury audit."
+      "title": "5. Temple Agamas",
+      "desc": "Different Agamas in Hindu Sastras: Vaishnavam (Vaikhanasam, Pancharatram, Chattada Srivaishnavam), Saivam (Smardham, Adi Saiva, Veera Saiva, Jangama, Kapalika) and Saktheyam."
     },
     {
-      "title": "6. Relevant Laws & Acts",
-      "desc": "AP Charitable and Hindu Religious Institutions and Endowments Act, 1987 (Act 30 of 1987)."
+      "title": "6. Hindu Festivals & Classical Fine Arts",
+      "desc": "Hindu festivals celebrated in different parts of India and classical fine arts of Indian origin."
     },
     {
-      "title": "7. Revision + Model Papers",
-      "desc": "Paper-II practice MCQs on temple administration, mythology, and legal regulations."
+      "title": "7. Vedic Culture",
+      "desc": "Yagnas and Yagams in Vedic culture; Vedas, Upavedas, Upanishads and Dharmas in different stages of life."
+    },
+    {
+      "title": "8. Hindu Philosophies, Cults & Gurus",
+      "desc": "Different philosophies and cults in Hindu religion, including Alwars, Nayanars, Sankaracharya (Advaita), Ramanujacharya (Vishishtadvaita), Madhwacharya (Dvaithadvaita) and Basava (Veera Saiva)."
+    },
+    {
+      "title": "9. Family Structure in Hindu Society",
+      "desc": "Adoption and succession in Hindu society."
+    },
+    {
+      "title": "10. Temple & Charitable Institution Income",
+      "desc": "Sources of income for temples and charitable institutions and allocation of Endowment Institution funds for different purposes under Section 57 of the Endowments Act, 30/87."
+    },
+    {
+      "title": "11. Duties of Executive Officers",
+      "desc": "Duties of Executive Officers of Endowment Institutions under Section 29 of the Endowments Act, 30/87."
+    },
+    {
+      "title": "12. Endowment Land Records & Laws",
+      "desc": "Basic knowledge of land records, law relating to Endowment lands, the ROR Act (Record of Rights in Land and Pattadar Pass Book Act), and Sections 75 to 86 of Endowments Act 30/87."
     }
-  ]
+  ],
+  "computerProficiencyTest": {
+    "title": "Computer Proficiency Test (CPT)",
+    "scheme": "Practical test: 60 minutes, 100 marks. Minimum qualifying marks: SC/ST/PBD 30, BC 35, OC 40.",
+    "partA": [
+      {
+        "title": "1. Introduction to Computers",
+        "desc": "Computer components and classification; peripheral, input and output devices; storage devices; data and information; CPU, control unit, memory unit and ALU."
+      },
+      {
+        "title": "2. Computer Software Types",
+        "desc": "System software, application software, embedded software, proprietary software and open-source software, including their purpose and characteristics."
+      },
+      {
+        "title": "3. Operating System",
+        "desc": "Purpose of operating systems and single-user and multi-user operating systems with examples."
+      },
+      {
+        "title": "4. Windows Operating System",
+        "desc": "GUI and CUI, files and folders, running applications, file manager, printer, webcam, scanner and other peripheral devices."
+      },
+      {
+        "title": "5. Linux / Mac OS",
+        "desc": "Basic concepts, features, advantages, file handling commands, directory handling, user management, file permissions and basic commands."
+      },
+      {
+        "title": "6. Internet Concepts",
+        "desc": "Hardware and software requirements, internet communication protocols and facilities, IP address, browsers, networking, uploading and downloading files."
+      },
+      {
+        "title": "7. Electronic Mail",
+        "desc": "Sending and receiving email, basic email functions, using a word processor for email, finding email addresses, mailing lists and list servers."
+      },
+      {
+        "title": "8. World Wide Web",
+        "desc": "Advantages of the Web, navigating the Web and Web searching."
+      }
+    ]
+  }
 };
 
 window.SSC_CGL_CALM_GUIDE = {

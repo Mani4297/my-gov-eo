@@ -800,6 +800,11 @@ function renderSubjectTrackList(trackKey) {
   } else if (trackKey === "endowment") {
     content.innerHTML = `
       <h3 style="margin-bottom:14px; font-weight:700;">APPSC Endowment Officer Grade-III Track</h3>
+      <div class="card" style="margin-bottom:16px; background-color:var(--bg-card-subtle);">
+        <h4 style="color:var(--accent-primary); font-weight:700; margin-bottom:8px;">Written Examination Pattern</h4>
+        <p style="color:var(--text-main); line-height:1.7;">${window.APPSC_ENDOWMENT_SYLLABUS.writtenExam.paperCount} papers | ${window.APPSC_ENDOWMENT_SYLLABUS.writtenExam.questionsPerPaper} questions and ${window.APPSC_ENDOWMENT_SYLLABUS.marksPerPaper} marks per paper | ${window.APPSC_ENDOWMENT_SYLLABUS.minutesPerPaper} minutes per paper | Total: ${window.APPSC_ENDOWMENT_SYLLABUS.writtenExam.totalMarks} marks</p>
+        <p style="color:var(--accent-amber); margin-top:6px;">Negative marking: ${window.APPSC_ENDOWMENT_SYLLABUS.writtenExam.negativeMarking}</p>
+      </div>
       <div class="card" style="margin-bottom:16px;">
         <h4 style="color:var(--accent-primary); font-weight:700; margin-bottom:10px;">Paper-I: General Studies & Mental Ability</h4>
         <ul style="margin-left:20px; line-height:1.8; color:var(--text-main);">
@@ -810,6 +815,13 @@ function renderSubjectTrackList(trackKey) {
         <h4 style="color:var(--accent-amber); font-weight:700; margin-bottom:10px;">Paper-II: Hindu Philosophy & Temple Administration</h4>
         <ul style="margin-left:20px; line-height:1.8; color:var(--text-main);">
           ${window.APPSC_ENDOWMENT_SYLLABUS.paper2.map((p) => `<li><strong>${p.title}:</strong> ${p.desc}</li>`).join("")}
+        </ul>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h4 style="color:var(--accent-blue); font-weight:700; margin-bottom:8px;">${window.APPSC_ENDOWMENT_SYLLABUS.computerProficiencyTest.title}</h4>
+        <p style="color:var(--text-muted); margin-bottom:12px;">${window.APPSC_ENDOWMENT_SYLLABUS.computerProficiencyTest.scheme}</p>
+        <ul style="margin-left:20px; line-height:1.8; color:var(--text-main);">
+          ${window.APPSC_ENDOWMENT_SYLLABUS.computerProficiencyTest.partA.map((p) => `<li><strong>${p.title}:</strong> ${p.desc}</li>`).join("")}
         </ul>
       </div>
     `;
